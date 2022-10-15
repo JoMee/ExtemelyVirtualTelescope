@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  state_api:
+    build: ./state_api
+    networks:
+      - telescope
+    ports:
+      - 5001:5000
+  webcam:
+    build: ./webcam
+    networks:
+      - telescope
+    ports:
+      - 5000:5000
+
+networks:
+  telescope:
+    driver: bridge

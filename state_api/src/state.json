@@ -1,0 +1,25 @@
+{
+    "old_state": {
+        "timestamp": "2022-10-13 16:48:16.147637",
+        "altitude": 0.0,
+        "azimuth": 0.0,
+        "door_open": false,
+        "door_state": 0.0
+    },
+    "updated_state": {
+        "timestamp": "2022-10-13 16:48:16.147787",
+        "altitude": 40.0,
+        "azimuth": 0.0,
+        "door_state": 0.0,
+        "door_open": false
+    },
+    "properties": {
+        "azimuthal_velocity": 2.0,
+        "altitudal_velocity": 2.0,
+        "min_altitudal_angle": 0.0,
+        "max_altitudal_angle": 90.0,
+        "min_door_state": 0.0,
+        "max_door_state": 1.0,
+        "door_velocity": 0.1
+    }
+}
