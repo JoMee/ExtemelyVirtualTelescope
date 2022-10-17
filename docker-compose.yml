@@ -5,19 +5,18 @@ services:
     build: ./state_api
     networks:
       - telescope
-    ports:
-      - 5001:5000
   webcam:
     build: ./webcam
     networks:
       - telescope
     ports:
-      - 5000:5000
+      - 5001:5000
   website:
     build: ./website
     networks:
       - telescope
-
+    ports:
+      - 5000:5000
 
 networks:
   telescope:

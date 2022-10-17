@@ -1,5 +1,4 @@
 from flask import Flask, render_template, Response, request
-import cv2
 import os, sys
 import json
 from datetime import datetime
@@ -7,7 +6,6 @@ import statecontrol as statecontrol
 
 
 app = Flask(__name__)
-
 
 
 def get_state_file():
