@@ -12,4 +12,4 @@ RUN pip3 install requests
 COPY ./src /src/
 COPY ./startup.py /
 
-CMD python3 startup.py
+CMD python3 startup.py 
