@@ -65,6 +65,7 @@
   line-height: 60px;
 }
 .sidebar .nav-list{
+  padding-left: 0em;
   margin-top: 20px;
   height: 100%;
 }
