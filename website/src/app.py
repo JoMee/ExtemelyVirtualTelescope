@@ -14,14 +14,14 @@ def submit_form():
     json_response = request.get_json()
 
     
-    url = 'http://state_api:5000/api_post'
+    url = 'http://lab_master:5000/api_state_post'
 
     
     json_response['door_state'] = '0'
     json_response['door_open'] = False
 
-    print(json_response)
+    print(json_response, flush=True)
 
-    requests.post(url, data = json_response)
+    requests.post(url, json = json_response)
 
     return '', 204

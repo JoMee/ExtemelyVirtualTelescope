@@ -21,10 +21,9 @@ def get_dict():
 
 @app.route("/api_post", methods = ['POST'])
 def set_state():
-    json_response = json.loads(json.dumps(request.form))
-
+    json_response = request.get_json()
     state_file = get_state_file()
-    print(json_response)
+    
 
     new_state = {
             "timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f'),
@@ -33,10 +32,8 @@ def set_state():
             "door_state": float(json_response['door_state']),
             "door_open": False,
             }
-    print(new_state)
 
     new_state_file = statecontrol.update_state(state_file, new_state)
-
 
     with open("./state.json", "w") as outfile:
         outfile.write(json.dumps(new_state_file, indent = 4))

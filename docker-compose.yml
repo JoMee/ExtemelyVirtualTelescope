@@ -1,6 +1,10 @@
 version: "3.9"
 
 services:
+  virtual_telescope_master:
+    build: ./virtual_telescope_master
+    networks:
+      - telescope
   state_api:
     build: ./state_api
     networks:
@@ -11,12 +15,17 @@ services:
       - telescope
     ports:
       - 5001:5000
+  lab_master:
+    build: ./lab_master
+    networks:
+      - telescope
   website:
     build: ./website
     networks:
       - telescope
     ports:
       - 5000:5000
+
 
 networks:
   telescope:
