@@ -24,7 +24,7 @@ def set_state():
     json_response = json.loads(json.dumps(request.form))
 
     state_file = get_state_file()
-    print(type(float(json_response['altitude'])))
+    print(json_response)
 
     new_state = {
             "timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f'),

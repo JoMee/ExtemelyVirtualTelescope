@@ -1,14 +1,14 @@
 {
     "old_state": {
-        "timestamp": "2022-10-13 16:48:16.147637",
-        "altitude": 0.0,
+        "timestamp": "2022-10-18 14:14:28.430481",
+        "altitude": 10.0,
         "azimuth": 0.0,
         "door_open": false,
         "door_state": 0.0
     },
     "updated_state": {
-        "timestamp": "2022-10-13 16:48:16.147787",
-        "altitude": 40.0,
+        "timestamp": "2022-10-18 14:14:28.430537",
+        "altitude": 10.0,
         "azimuth": 0.0,
         "door_state": 0.0,
         "door_open": false

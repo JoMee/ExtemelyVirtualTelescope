@@ -2,7 +2,11 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
+    {% block title %}
+<!--
     <title>Extremely Virtual Telescope</title>
+-->
+    {% endblock %}
 
     <link rel="stylesheet" href="/static/style.css">
     <!-- TODO: Download -->
@@ -49,33 +53,28 @@
     </ul>
   </div>
 
-  <section class="home-section">
+  {% block content %}
 <!--
+  <section class="home-section">
       <div class="text">Dashboard</div>
   <br>
          <img src="http://127.0.0.1:5001/video_feed" width="40%"> 
-
+  </section>
 -->
 
-
-  </section>
+  {% endblock %}
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
   <script>
   let sidebar = document.querySelector(".sidebar");
   let closeBtn = document.querySelector("#btn");
-  let searchBtn = document.querySelector(".bx-search");
 
   closeBtn.addEventListener("click", ()=>{
     sidebar.classList.toggle("open");
     menuBtnChange();//calling the function(optional)
   });
 
-  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
-    sidebar.classList.toggle("open");
-    menuBtnChange(); //calling the function(optional)
-  });
 
   // following are the code to change sidebar button(optional)
   function menuBtnChange() {
