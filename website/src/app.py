@@ -11,8 +11,7 @@ def get_interface():
 
 @app.route("/submit", methods = ['POST'])
 def submit_form():
-    print("===================================")
-    json_response = json.loads(json.dumps(request.form))
+    json_response = request.get_json()
 
     
     url = 'http://state_api:5000/api_post'
@@ -22,10 +21,7 @@ def submit_form():
     json_response['door_open'] = False
 
     print(json_response)
-    
 
     requests.post(url, data = json_response)
-    
-
 
     return '', 204
